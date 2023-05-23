@@ -1,0 +1,51 @@
+<apex:page controller="InsuranceCoverageValidationController">
+    <apex:form >
+        <apex:pageBlock title="Bajaj Allianz Group Sampoorna Jeevan Suraksha policy">
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!member.SumAssured}" label="Sum Assured" />
+                <apex:inputField value="{!member.Age}" label="Age" />
+                <apex:inputField value="{!member.AnnualIncome}" label="Annual Income" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Submit" action="{!validate}" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+        <apex:outputPanel rendered="{!displaySumAssured}" >
+            <apex:pageBlock title="Sum Assured Ranges">
+                <apex:pageBlockSection>
+                    <apex:selectList size="1" value="{!sumAssured}">
+                        <apex:selectOption itemLabel="50K" itemValue="50K"/>
+                        <apex:selectOption itemLabel="1Lac" itemValue="1Lac"/>
+                        <apex:selectOption itemLabel="1.5Lac" itemValue="1.5Lac"/>
+                        <apex:selectOption itemLabel="2Lac" itemValue="2Lac"/>
+                    </apex:selectList>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!displayPolicyTenure}">
+            <apex:pageBlock title="Policy Tenure Range">
+                <apex:pageBlockSection>
+                    <apex:selectList size="1" value="{!policyTenure}">
+                        <apex:selectOption itemLabel="12 Months" itemValue="12"/>
+                        <apex:selectOption itemLabel="15 Months" itemValue="15"/>
+                        <apex:selectOption itemLabel="18 Months" itemValue="18"/>
+                        <apex:selectOption itemLabel="24 Months" itemValue="24"/>
+                    </apex:selectList>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!displayOTP}">
+            <apex:pageBlock title="OTP Validation">
+                <apex:pageBlockSection>
+                    <apex:inputText value="{!OTP}" label="Enter OTP:" />
+                </apex:pageBlockSection>
+                <apex:pageBlockButtons location="bottom">
+                    <apex:commandButton value="Validate" action="{!validateOTP}" />
+                </apex:pageBlockButtons>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

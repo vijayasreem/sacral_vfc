@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VF>
+   <VF-Page>
+      <VF-Page-Validation>
+         <Minimum-Sum-Assured>
+            <Validate apply="true">
+               <Message>Minimum sum assured must be applied.</Message>
+            </Validate>
+         </Minimum-Sum-Assured>
+         <Maximum-Sum-Assured>
+            <Validate apply="true">
+               <Message>Maximum sum assured must be applied.</Message>
+            </Validate>
+         </Maximum-Sum-Assured>
+         <Minimum-Age-Limit>
+            <Validate apply="true">
+               <Message>Minimum age limit must be applied.</Message>
+            </Validate>
+         </Minimum-Age-Limit>
+         <Maximum-Age-Limit>
+            <Validate apply="true">
+               <Message>Maximum age limit must be applied.</Message>
+            </Validate>
+         </Maximum-Age-Limit>
+         <Annual-Income>
+            <Validate apply="true">
+               <Message>Annual income must be greater than 40K.</Message>
+            </Validate>
+         </Annual-Income>
+         <Sum-Assured-Ranges>
+            <Validate apply="true">
+               <Message>Sum assured ranges of 50K, 1lac, 1.5 lac, and 2 lac must be displayed to the Bandhan Bank sales personnel for selection.</Message>
+            </Validate>
+         </Sum-Assured-Ranges>
+         <Policy-Tenure-Ranges>
+            <Validate apply="true">
+               <Message>Policy tenure ranges of 12, 15, 18, and 24 months must be displayed to the Bandhan Bank sales personnel for selection.</Message>
+            </Validate>
+         </Policy-Tenure-Ranges>
+         <Spouse-Coverage>
+            <Validate apply="true">
+               <Message>If a member is not eligible for insurance coverage, their spouse will also not receive coverage.</Message>
+            </Validate>
+         </Spouse-Coverage>
+         <OTP-Authentication>
+            <Validate apply="true">
+               <Message>Insurance coverage will not be provided to the member if the OTP authentication is not received from the Bandhan Bank sales personnel.</Message>
+            </Validate>
+         </OTP-Authentication>
+      </VF-Page-Validation>
+   </VF-Page>
+</VF>
